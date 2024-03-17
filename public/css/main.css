@@ -1,0 +1,126 @@
+*{
+    /* border: 1px solid red */
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#BeginRecognition {
+    position: absolute;
+    z-index: 3;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+#live2d{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: transparent;
+}
+
+#conversationHeader {
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 59.375rem;
+    padding: 10px;
+    z-index: 2;
+
+    font-family: Verdana, sans-serif;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(247, 15, 135, 0.58);
+}
+
+#username, #botname{
+    flex: 1;
+    text-align: center;
+    background-color: rgba(255, 196, 226, 0.6);
+    border: 5px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#username {
+    text-align: left;
+    margin-right: 500px;
+}
+
+#botname {
+    text-align: right;
+    overflow: hidden;
+    border-right: 10px solid white;
+    white-space: nowrap;
+    animation: typing 1s forwards;
+    width: 0;
+}
+
+#conversation {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    height: 15.625rem;
+    width: 62.5rem;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: rgba(245, 39, 145, 0.42);
+    border: 5px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 2;
+}
+
+#TextDetection, #GPTAnswer {
+    flex: 1 1 50%;
+    font-family: Verdana, sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1.1px;
+    -webkit-text-stroke-color: black;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+}
